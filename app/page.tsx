@@ -20,12 +20,16 @@ export default function Home() {
       <Search search={search} setSearch={setSearch} />
 
       <section>
-        <ul className="bg-amber-300 space-y-4">
-          {filteredBlogs.slice(-3).map((blog) => (
-            <li className="border p-4 rounded-lg shadow-sm" key={blog.id}>
-              <h2 className="text-2xl font-semibold">{blog.titulo}</h2>
+        <ul className="space-y-3">
+          {filteredBlogs.slice(0,3).map((blog) => (
+            <li className="bg-white p-4 rounded-2xl" key={blog.id}>
+              <div className="flex justify-between text-sm text-[#ccabab]">
+                <p>Postado: {blog.data}</p>
+                <p>Autor: {blog.autor}</p>
+              </div>
+              <h2 className="text-xl font-extrabold">{blog.titulo}</h2>
+
               <p>{blog.conteudo.slice(0, 100)}...</p>
-              <p className="text-gray-400">{blog.autor}</p>
               <Link className="text-blue-500 hover:underline" href={`/blogs/${blog.id}`}>
                 Ler mais &raquo;
               </Link>
