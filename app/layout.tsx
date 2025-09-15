@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer"
 
-const geistSans = Geist({
+const jetBrains = JetBrains_Mono({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Devlog - Blog de uma desenvolvedora em formação",
+  title: "console.blog();",
   description: "Blog de uma desenvolvedora em formação",
 };
 
@@ -26,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${jetBrains.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer/>

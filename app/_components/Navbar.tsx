@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="bg-foreground">
-      <ul className="flex justify-between h-20 mx-auto w-[80%] items-end pb-2 text-1xl text-background font-bold ">
+    <div className="bg-[#49111C]">
+      <ul className="flex justify-between h-15 mx-auto items-center text-1xl text-white font-bold w-3/4">
         <li>
-          <Link href="/">Início</Link>
+          <Link href="/">Blogs</Link>
         </li>
         <li>
           <Link href="/about">Sobre mim</Link>
@@ -20,3 +20,4 @@ export default function Navbar() {
     </div>
   );
 }
+
