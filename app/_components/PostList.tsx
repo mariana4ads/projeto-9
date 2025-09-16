@@ -29,8 +29,8 @@ export default function PostList() {
       <Search search={search} setSearch={setSearch} />
 
       <section>
-        <ul className="space-y-3 lg:grid grid-cols-3 gap-4 h-auto">
-          {filteredPosts.slice(0, 6).map((post) => (
+        <ul className="space-y-3 lg:grid grid-cols-3 2xl:grid-cols-4 gap-4 h-auto">
+          {filteredPosts.map((post) => (
             <li className="bg-white dark:bg-[#49111C] p-4 mb-0 mb-3" key={post.id}>
               <div className="flex justify-between text-xs pb-1 text-[#ccabab] border-b">
                 <p>{post.data}</p>
@@ -40,7 +40,7 @@ export default function PostList() {
 
               <p className="text-sm">{post.conteudo.slice(0, 100)}...</p>
               <Link
-                className="bg-[#e47979] py-1 px-3 text-background text-sm hover:underline"
+                className="bg-[#e47979] py-1 px-3 text-background text-sm hover:underline justify-end items-end"
                 href={`/posts/${post.id}`}
               >
                 Ler mais ⟹

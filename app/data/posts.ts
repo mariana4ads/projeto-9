@@ -9,6 +9,15 @@ type Post = {
 
 export const posts: Post[] = [
   {
+    id: 12,
+    titulo: "Entendendo IDs, slugs e rotas dinâmicas no React e Next.js",
+    conteudo:
+      "Em aplicações modernas com React e Next.js, o uso de identificadores como `id` e `slug` é essencial para estruturar rotas dinâmicas e organizar o conteúdo. O `id` geralmente é um número ou UUID usado para buscar dados com precisão no backend, enquanto o `slug` é uma versão legível e amigável para URLs, como `meu-primeiro-post`, que melhora a experiência do usuário e o SEO da aplicação. No Next.js, rotas dinâmicas são criadas com arquivos como `[id].tsx` ou `[slug].tsx`, permitindo que cada página seja gerada com base em dados específicos. A função `generateStaticParams()` ajuda a pré-renderizar essas rotas, enquanto `useParams()` ou `useRouter()` capturam os valores da URL no lado do cliente. Além disso, boas práticas como separar componentes (`PostCard`, `PostList`, `PostPage`), usar tipagem com TypeScript e aplicar estados de carregamento com `Suspense` tornam o código mais limpo, escalável e confiável. Para quem está evoluindo no desenvolvimento frontend, dominar esses padrões é um passo importante para construir interfaces dinâmicas e profissionais.",
+    autor: "Mariana Rocha",
+    data: "16-09-2025",
+    tags: ["react", "nextjs", "slug", "id", "frontend"],
+  },
+  {
     id: 11,
     titulo: "Dominando o TypeScript: além da tipagem",
     conteudo:
@@ -107,5 +116,4 @@ export const posts: Post[] = [
     data: "27-08-2025",
     tags: ["express", "api", "nodejs", "backend"],
   },
-
 ];
