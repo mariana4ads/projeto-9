@@ -4,7 +4,12 @@ export default function PostPage({ params }) {
   const post = posts.find((p) => p.id === Number(params.id));
 
   if (!post) {
-    return <h1>Post não encontrado</h1>;
+    return (
+      <div className="text-center items-center h-full">
+        <h1>Post não encontrado</h1>
+        <p>Voltar</p>
+      </div>
+    );
   }
 
   return (

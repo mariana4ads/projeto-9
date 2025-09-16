@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
-import Footer from "./_components/Footer"
+import Footer from "./_components/Footer";
 
 const jetBrains = JetBrains_Mono({
-  variable: "--font-geist-sans",
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 
@@ -21,10 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${jetBrains.variable} antialiased`}>
+      <body className={`${jetBrains.variable} antialiased h-dvh flex flex-col overflow-hidden`}>
         <Navbar />
-        {children}
-        <Footer/>
+        <main className="flex-1 overflow-y-auto pb-4">{children}</main>
+        <Footer />
       </body>
     </html>
   );

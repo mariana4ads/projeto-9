@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const classLink = "relative py-5 px-2 sm:px-6 text-[#ffefef] font-bold hover:text-red-200 hover:bg-[#38040A]";
+const classLink = "text-sm sm:text-base relative py-5 px-3 sm:px-6 text-[#ffefef] font-bold hover:text-red-200 hover:bg-[#38040A]";
 
 export default function Navbar() {
   const pathname = usePathname();
