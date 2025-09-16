@@ -1,4 +1,4 @@
-export type Blog = {
+type Post = {
   id: number;
   titulo: string;
   conteudo: string;
@@ -7,7 +7,7 @@ export type Blog = {
   tags: string[];
 };
 
-export const blogs: Blog[] = [
+export const posts: Post[] = [
   {
     id: 1,
     titulo: "Dominando o TypeScript: além da tipagem",
